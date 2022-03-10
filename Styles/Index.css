@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../Images/bg.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+  overflow: hidden;
+}
+
+.start-game {
+  width: 70%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+}
+
+.start-game button {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #064e3b;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.start-game button:hover {
+  background-color: #15803d;
+}
+
+.game-over {
+  position: absolute;
+  top: 8%;
+  left: 16%;
+  width: 65%;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px rgb(100, 100, 100);
+  background-color: #881337;
+  animation: an-game-over 0.5s 1;
+}
+
+.game-over .title {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over .title h1 {
+  font-size: 60px;
+  color: #fff;
+}
+
+.game-over .score-now,
+.record {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over .score-now p {
+  font-size: 30px;
+  color: #f97316;
+}
+
+.game-over .record p {
+  font-size: 30px;
+  color: #15803d;
+}
+
+.game-over .start {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-over .start button {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border-radius: 7px;
+  background-color: #064e3b;
+  color: #fff;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.game-over .start button:hover {
+  background-color: #15803d;
+}
+
+.scores {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #65a30d;
+}
+
+.monster {
+  position: absolute;
+  top: -3000px;
+  animation: an-monster 1.7s 1;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+}
+
+@keyframes an-monster {
+  0% {
+    top: 0%;
+  }
+  /* 20% {
+    top: 20%;
+  }
+  40% {
+    top: 40%;
+  }
+  60% {
+    top: 60%;
+  }
+  80% {
+    top: 80%;
+  } */
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes an-game-over {
+  0% {
+    margin: 0 auto;
+  }
+  100% {
+    margin: 20px auto;
+  }
+}
+
+.hidden {
+  display: none;
+}
